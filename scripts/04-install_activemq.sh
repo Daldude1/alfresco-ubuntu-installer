@@ -3,9 +3,9 @@
 set -e
 
 # Variables
-ACTIVEMQ_USER=ubuntu
-ACTIVEMQ_GROUP=ubuntu
-ACTIVEMQ_HOME=/home/ubuntu/activemq
+ACTIVEMQ_USER=$(whoami)
+ACTIVEMQ_GROUP=$(id -gn)
+ACTIVEMQ_HOME=/home/$ACTIVEMQ_USER/activemq
 
 echo "Installing Curl..."
 sudo apt install -y curl
